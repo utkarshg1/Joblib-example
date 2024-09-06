@@ -6,10 +6,11 @@ This web application predicts the species of an iris flower based on its sepal a
 
 ### Prerequisites
 
-- Python 3.10+
+- Python 3.12.4
 - Streamlit
 - Scikit-learn
 - Joblib
+- Pandas
 - Docker (optional, for containerization)
 
 ### Installation
