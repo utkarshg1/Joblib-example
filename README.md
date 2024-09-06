@@ -18,8 +18,8 @@ This web application predicts the species of an iris flower based on its sepal a
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/iris-prediction-app.git
-   cd iris-prediction-app
+   git clone https://github.com/utkarshg1/Joblib-example.git
+   cd Joblib-example
    ```
 
 2. **Create a virtual environment and activate it**:
