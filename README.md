@@ -38,7 +38,7 @@ This web application predicts the species of an iris flower based on its sepal a
 4. **Run the application**:
 
    ```bash
-   streamlit run app.py
+   python3 -m streamlit run app.py
    ```
 
    Access the app at `http://localhost:8501`.
