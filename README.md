@@ -47,16 +47,10 @@ This web application predicts the species of an iris flower based on its sepal a
 
 To run the app with Docker:
 
-1. **Build the Docker image**:
+1. **Run the Docker container**:
 
    ```bash
-   docker build -t iris-prediction-app .
-   ```
-
-2. **Run the Docker container**:
-
-   ```bash
-   docker run -p 8501:8501 iris-prediction-app
+   docker compose up --build
    ```
 
    Access the app at `http://localhost:8501`.
