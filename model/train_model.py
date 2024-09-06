@@ -4,6 +4,7 @@ from sklearn.pipeline import make_pipeline
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
 import joblib
 
 def load_dataframe():
@@ -31,7 +32,10 @@ def save_model(pipe, xtrain, ytrain, xtest, ytest):
     cv_scores = cross_val_score(pipe, xtrain, ytrain, cv=5, scoring="f1_macro")
     print(f"Train Score : {train_score:.4f}")
     print(f"Test Score : {test_score:.4f}")
-    print(f"5 fold cross validated F1 Macro score : {cv_scores.mean():.4f}")
+    print(f"5 fold cross validated on Train F1 Macro score : {cv_scores.mean():.4f}")
+    ypred_test = pipe.predict(xtest)
+    print("\nClassification Report for test data :\n")
+    print(classification_report(ytest, ypred_test))
     path = "model/iris_model.joblib"
     joblib.dump(pipe, path)
     return path
