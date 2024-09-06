@@ -7,7 +7,7 @@ from sklearn.linear_model import LogisticRegression
 import joblib
 
 def load_dataframe():
-    df = pd.read_csv("train_model/iris.csv")
+    df = pd.read_csv("model/iris.csv")
     return df 
 
 def split_data(df, test_size=0.33):
@@ -32,11 +32,11 @@ def save_model(pipe, xtrain, ytrain, xtest, ytest):
     print(f"Train Score : {train_score:.4f}")
     print(f"Test Score : {test_score:.4f}")
     print(f"5 fold cross validated F1 Macro score : {cv_scores.mean():.4f}")
-    path = "train_model/iris_model.joblib"
+    path = "model/iris_model.joblib"
     joblib.dump(pipe, path)
     return path
 
-def load_model(path="train_model/iris_model.joblib"):
+def load_model(path="model/iris_model.joblib"):
     model = joblib.load(path)
     return model
 
