@@ -20,7 +20,7 @@ submit = st.button("Predict")
 # Predict results
 if submit:
     pred, prob = predict_results(model, sep_len, sep_wid, pet_len, pet_wid)
-    st.subheader("Predictionsa are : ")
+    st.subheader("Predictions are : ")
     st.subheader(f"Predicted Species : {pred}")
     st.subheader(f"\nProbabilities : ")
     for species, pr in prob.items():
