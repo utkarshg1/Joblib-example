@@ -63,6 +63,10 @@ To run the app with Docker:
 
 Once the app is running, input the sepal length, sepal width, petal length, and petal width. Click on "Predict" to get the predicted species and the corresponding probabilities.
 
+## Dockerhub link
+
+Dockerhub Link - [https://hub.docker.com/r/utkarshg1/streamlit-iris](https://hub.docker.com/r/utkarshg1/streamlit-iris)
+
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
